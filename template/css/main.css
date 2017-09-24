@@ -17,12 +17,20 @@ h1, h2, h3 {
 a {
     color: #BE4E55;
     text-decoration: underline;
-
 }
 
 a:hover {
-    color: #C05D63;
-    
+    color: #C05D63;   
+}
+
+.button-format {
+    background-color: #66292D;
+    border-radius: .8em;
+}
+
+.button-format:hover {
+    background-color: #C05D63;
+    color: #fff;
 }
   /*==== header ====*/
   .nav-prop {
@@ -47,6 +55,7 @@ a:hover {
     flex:1;
     width: 96%;
     min-height: 75vh;
+    margin: 0 auto;
   }
 
   /*==== footer ====*/
