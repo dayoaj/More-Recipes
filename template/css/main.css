@@ -82,7 +82,8 @@ a:hover {
   }
 
   .form-wrap {
-      width: auto;
+      width: 60em;
+      left: 4em;
       border: 3px solid #F57E7E;
       padding: 3em 2em;
       margin: 4em 10em;
