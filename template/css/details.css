@@ -1,0 +1,15 @@
+.main-page {
+    background-color: rgba(192, 59, 97, 0.24);
+}
+
+img {
+    border: 3px solid #0F0F0F;
+    margin: 2em 0 0 4em;
+    padding: 0;
+}
+
+.img-caption {
+    max-width: 40%;
+    margin: 0 0 2em 4em;
+    padding: 0;
+}
