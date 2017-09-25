@@ -1,94 +1,96 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    
-    <title>Recipe Catalog</title>
-    <!--Import Google Icon Font-->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
-    <!--Import materialize.css-->
-    <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+<head>
 
-    <link type="text/css" rel="stylesheet" href="css/main.css"/>
-    <link type="text/css" rel="stylesheet" href="css/catalog.css"/>
+  <title>Recipe Catalog</title>
+  <!--Import Google Icon Font-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
-  </head>
+  <!--Import materialize.css-->
+  <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
 
-  <body>
-    <header>
-      <div class="navbar-fixed">
-        <nav>
-            <div class="nav-wrapper nav-prop">
-              <a href="#" class="logo">More-Recipes</span></a>
-              <ul id ="nav-mobile" class="left">
-                <li><a href="">Home</a></li>
-                <li><a href="">Recipes</a></li>
-                <li><a href="">About</a></li>
-              </ul>
+  <link type="text/css" rel="stylesheet" href="css/main.css" />
+  <link type="text/css" rel="stylesheet" href="css/catalog.css" />
 
-              <ul id="nav-mobile" class="right">
-                  <li><a href="">Sign up</a></li>
-                  <li><a href="">Sign in</a></li>
-              </ul>
-            </div>
-          </nav>
-      </div>  
-    </header>
-      <div class="outer-wrapper">
-        <div class="wrap-catalog">
-            <div class="wrap-search">
-                <div class="search">
-                        <form action="">
-                            <div class="input-field">
-                                <input placeholder="Search Recipe" id="search" type="search" >
-                                <i class="material-icons">search</i>
-                            </div>
-                        </form>
-                </div>
-            </div>
-            
-                    <div class="main-catalog">     
-                        <div id="catalog-view">
-                            <h2>Recipe Listing</h2>
-                            <div class="collection catalog-link">
-                                    <a href="#!" class="collection-item">Banga and Starch</a>
-                                    <a href="#!" class="collection-item">Moi-Moi</a>
-                                    <a href="#!" class="collection-item">Ewedu and Amala</a>
-                                    <a href="#!" class="collection-item">Akara</a>
-                                    <a href="#!" class="collection-item">Egusi and Eba</a>
-                                    <a href="#!" class="collection-item">Afang and Fufu</a>
-                                    <a href="#!" class="collection-item">Ewa Agonyi</a>
-                                    <a href="#!" class="collection-item">Cat Fish Pepper Soup</a>
-                                    <a href="#!" class="collection-item">Miyan Kuka and Tuwo Shinkafa</a>
-                            </div>     
-                        </div>
+</head>
 
-                        <div id="popular-view">
-                                <h3>Popular</h3>
-                                <div class="collection catalog-link">
-                                        <a href="#!" class="collection-item">Banga and Starch</a>
-                                        <a href="#!" class="collection-item">Moi-Moi</a>
-                                        <a href="#!" class="collection-item">Ewedu and Amala</a>
-                                        <a href="#!" class="collection-item">Akara</a>
-                                        <a href="#!" class="collection-item">Miyan Kuka and Tuwo Shinkafa</a>
-                                </div>
-                        </div>
-                    </div>
+<body>
+  <header>
+    <div class="navbar-fixed">
+      <nav>
+        <div class="nav-wrapper nav-prop">
+          <a href="#" class="logo">More-Recipes</span></a>
+          <ul id="nav-mobile" class="left">
+            <li><a href="">Home</a></li>
+            <li><a href="">Recipes</a></li>
+            <li><a href="">About</a></li>
+          </ul>
+
+          <ul id="nav-mobile" class="right">
+            <li><a href="">Sign up</a></li>
+            <li><a href="">Sign in</a></li>
+          </ul>
         </div>
-        
-
-      </div>
-    <footer>        
-          <div class="container">
-            <div class="copyright">
-                © 2017 Copyright
+      </nav>
+    </div>
+  </header>
+  <div class="outer-wrapper">
+    <div class="wrap-catalog">
+      <div class="wrap-search">
+        <div class="search">
+          <form action="">
+            <div class="input-field">
+              <input placeholder="Search Recipe" id="search" type="search">
+              <i class="material-icons">search</i>
             </div>
-          <a href="">Terms and Conditions</a> | <a href="">Policy</a>  | <a href="">Contacts</a>
-          </div>
-     </footer>
+          </form>
+        </div>
+      </div>
 
-    <!--Import jQuery before materialize.js-->
-    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-    <script type="text/javascript" src="js/materialize.min.js"></script>
-  </body>
+      <div class="main-catalog">
+        <div id="catalog-view">
+          <h2>Recipe Listing</h2>
+          <div class="collection catalog-link">
+            <a href="#!" class="collection-item">Banga and Starch</a>
+            <a href="#!" class="collection-item">Moi-Moi</a>
+            <a href="#!" class="collection-item">Ewedu and Amala</a>
+            <a href="#!" class="collection-item">Akara</a>
+            <a href="#!" class="collection-item">Egusi and Eba</a>
+            <a href="#!" class="collection-item">Afang and Fufu</a>
+            <a href="#!" class="collection-item">Ewa Agonyi</a>
+            <a href="#!" class="collection-item">Cat Fish Pepper Soup</a>
+            <a href="#!" class="collection-item">Miyan Kuka and Tuwo Shinkafa</a>
+          </div>
+        </div>
+
+        <div id="popular-view">
+          <h3>Popular</h3>
+          <div class="collection catalog-link">
+            <a href="#!" class="collection-item">Banga and Starch</a>
+            <a href="#!" class="collection-item">Moi-Moi</a>
+            <a href="#!" class="collection-item">Ewedu and Amala</a>
+            <a href="#!" class="collection-item">Akara</a>
+            <a href="#!" class="collection-item">Miyan Kuka and Tuwo Shinkafa</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+  <footer>
+    <div class="container">
+      <div class="copyright">
+        © 2017 Copyright
+      </div>
+      <a href="">Terms and Conditions</a> | <a href="">Policy</a> | <a href="">Contacts</a>
+    </div>
+  </footer>
+
+  <!--Import jQuery before materialize.js-->
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="js/materialize.min.js"></script>
+</body>
+
 </html>
