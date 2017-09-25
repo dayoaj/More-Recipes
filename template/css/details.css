@@ -1,5 +1,6 @@
 .main-page {
     background-color: rgba(192, 59, 97, 0.24);
+    padding: 1.2em 2.6em;
 }
 
 img {
@@ -12,4 +13,17 @@ img {
     max-width: 40%;
     margin: 0 0 2em 4em;
     padding: 0;
+}
+
+.group-format {
+    margin: 0 0 2em 4em;
+    padding: 0;
+    max-width: 20em;
+}
+
+.review-wrap {
+    margin: 0 0 2em 4em;
+    padding: 0;
+    max-width: 80%;
+    line-height: 1.4em;
 }
