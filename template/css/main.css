@@ -5,7 +5,7 @@ body {
     flex-direction: column;
     margin: 0 auto;
     min-height: 100vh;
-    background-color: rgba(248, 224, 211, 0.75);
+    background-color: #F1CAAC;
     color: rgba(43, 40, 40, 0.81);
     font-family: 'Cabin', Helvetica, Arial, sans-serif;
 }
@@ -51,11 +51,13 @@ a:hover {
 
 .button-format {
     background-color: #66292D;
+    margin: 0.4em 0;
+    border: 1px solid #E7B58E;
 }
 
 .button-format:hover {
     background-color: #C05D63;
-    color: #fff;
+    color: #FDB7B7;
 }
 
 

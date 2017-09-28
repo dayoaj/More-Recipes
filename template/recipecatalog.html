@@ -25,8 +25,8 @@
           <a href="#" class="logo">More-Recipes</span></a>
           <ul id="nav-mobile" class="left">
             <li><a href="">Home</a></li>
-            <li><a href="Recipe Catalog.html">Recipes</a></li>
-            <li><a href="My Profile.html">My Profile</a></li>
+            <li><a href="recipecatalog.html">Recipes</a></li>
+            <li><a href="myprofile.html">My Profile</a></li>
           </ul>
 
           <ul id="nav-mobile" class="right">
@@ -34,82 +34,66 @@
               <input id="search" type="search">
               <i class="material-icons">search</i>
             </div> -->
-            <li><a href="sign up.html">Sign up</a></li>
-            <li><a href="sign in.html">Sign in</a></li>
+            <li><a href="signup.html">Sign up</a></li>
+            <li><a href="signin.html">Sign in</a></li>
           </ul>
         </div>
       </nav>
     </div>
   </header>
-      <div class="main-catalog">
-        <div id="catalog-view">
-          <h2>Recipe Listing</h2>
+  <div class="main-catalog">
+    <div id="catalog-view">
+      <h2>Recipe Listing</h2>
 
-          <div class="row">
-            <div class="col s12">
-              <div class="card horizontal">
-                <div class="card-image col s4">
-                  <img src="media/jollofrice.jpg" class="responsive-image resize">
-                </div>
-                <div class="card-stacked col s8">
-                      <div class="card-content ">
-                          <p><a>Jollof Rice and Chicken</a></p>
-                        </div>
-                  </div>
-                  
-                </div>
+      <div class="row">
+        <div class="col s12">
+          <div class="card horizontal">
+            <div class="card-image col s4">
+              <img src="media/jollofrice.jpg" class="responsive-image resize">
+            </div>
+            <div class="card-stacked col s8">
+              <div class="card-content ">
+                <p><a>Jollof Rice and Chicken</a></p>
               </div>
             </div>
-            <div class="col s12">
-              <div class="card horizontal">
-                <div class="card-image col s4">
-                  <img src="media/amala.jpg" class="responsive-image resize">
-                </div>
-                <div class="card-stacked col s8">
-                  <div class="card-content ">
-                    <p><a>Amala and Ewedu</a></p>
-                  </div>
-                </div>
-              </div>
-            </div>
+
           </div>
         </div>
-
-        <!-- <div class="section"> -->
-
-        <div id="popular-view">
-          <div class="section">
-              <h3>Popular</h3>
-          </div>
-          <div class="divider"></div>
-          <div class="section">
-              <div class="container">
-                  <div class="row">
-                      <div class="col s12">
-                          <div class="carousel carousel-slider">
-                              <a class="carousel-item" href="#one!"><img src="https://lorempixel.com/800/400/food/1"></a>
-                              <a class="carousel-item" href="#two!"><img src="https://lorempixel.com/800/400/food/2"></a>
-                              <a class="carousel-item" href="#three!"><img src="https://lorempixel.com/800/400/food/3"></a>
-                              <a class="carousel-item" href="#four!"><img src="https://lorempixel.com/800/400/food/4"></a>
-                            </div>
-                      </div>
-                    </div>
-              </div> 
-          </div>
-            
-            <!-- <div class="collection catalog-link">
-              <a href="#!" class="collection-item">Banga and Starch</a>
-              <a href="#!" class="collection-item">Moi-Moi</a>
-              <a href="#!" class="collection-item">Ewedu and Amala</a>
-              <a href="#!" class="collection-item">Akara</a>
-              <a href="#!" class="collection-item">Miyan Kuka and Tuwo Shinkafa</a>
-            </div> -->
-              
-        </div>
-        
-
       </div>
-      <!-- main catalog -->
+      <div class="col s12">
+        <div class="card horizontal">
+          <div class="card-image col s4">
+            <img src="media/amala.jpg" class="responsive-image resize">
+          </div>
+          <div class="card-stacked col s8">
+            <div class="card-content ">
+              <p><a>Amala and Ewedu</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="popular-view">
+      <div class="section">
+        <h3>Popular</h3>
+      </div>
+      <div class="divider"></div>
+      <div class="section">
+        <div class="row">
+          <div class="col s12">
+            <div class="card">
+              <div class="card-image">
+                <img src="media/amala.jpg">
+                <span class="card-title">Amala and Ewedu</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <!-- main catalog -->
   <footer>
     <div class="container">
       <div class="copyright">
@@ -119,15 +103,18 @@
     </div>
   </footer>
 
-  
+
   <!--Import jQuery before materialize.js-->
   <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
   <script type="text/javascript" src="js/materialize.min.js"></script>
   <script>
-      $(document).ready(function(){
-        $('.carousel').carousel({ indicator: true});
-      });
-    </script>
+    // let cardImage = document.querySelector('#hover-me');
+    // cardImage.addEventListener('enter', (e) =>{
+    //   console.log(e);
+    // })
+        //cardImage.getElementById('hider').style.display = "inline";
+    
+  </script>
 
 </body>
 
