@@ -1,24 +1,25 @@
-.wrap-catalog {
-    position: flex;
-    flex-direction: column;
-    
+.main-catalog {
+    min-height: 50%;
+    display: flex;
+    margin: 2em 2em;
+    justify-content: space-between;
 }
 
-.wrap-search {
+img.resize {
+    width: 150px;
+    height: 200px;
+}
+
+.search-wrap {
     position: relative;
+    float: right;
+    margin: 0 4px;
 }
 
 .search {
     flex: 1;
     margin-top: 1px;
     padding: 1.2em 0 .2em 0;
-}
-
-.main-catalog {
-    flex: 2;
-    min-height: 50%;
-    display: flex;
-    justify-content: space-between;
 }
 
 #catalog-view {
