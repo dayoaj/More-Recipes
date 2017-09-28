@@ -1,0 +1,9 @@
+body {
+    
+    background-image: url("../media/food_background.jpg");
+}
+
+.outer-wrapper {
+    background-color: white;
+    background-color: rgba(102, 41, 45, 0.5);
+}
