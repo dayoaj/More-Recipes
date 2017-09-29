@@ -47,8 +47,8 @@ img.resize {
 }
 
 #search {
-    border: 2px solid #fff;
-    background-color: #F0B78C;
+    border: 2px solid #000;
+    background-color: #FFF;
     border-radius: 0.2em;
     line-height: 0.9em;
     width: 100%;
