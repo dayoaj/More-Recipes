@@ -35,7 +35,7 @@ router.post('/recipes', (req, res) => {
 
 router.put('/recipes/:recipeid', (req, res) => {
   global.recipes.forEach((recipe) => {
-    if (recipe.id === parseInt(req.params.recipeid, 10)) {
+    if (recipe.id === parseInt(req.params.recipeId, 10)) {
       recipe.title = req.body.title;
       recipe.upvotes = req.body.upvotes;
       recipe.reviews = req.body.reviews;
