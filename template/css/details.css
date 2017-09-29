@@ -13,16 +13,13 @@ img {
     padding: 0;
 }
 
-.img-caption {
-    max-width: 40%;
-    margin: 0 0 2em 4em;
-    padding: 0;
+.format-icon {
+    margin: 0 0.5em;
 }
 
 .group-format {
     margin: 0 0 2em 4em;
     padding: 0;
-    max-width: 40em;
 }
 
 .review-wrap {
@@ -34,6 +31,10 @@ img {
 
 .main-page h3 {
     text-align: center;
+}
+
+.collection {
+    margin-left: 5em;
 }
 
 textarea {

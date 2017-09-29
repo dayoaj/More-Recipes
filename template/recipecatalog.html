@@ -24,17 +24,20 @@
         <div class="nav-wrapper nav-prop">
           <a href="#" class="logo">More-Recipes</span></a>
           <ul id="nav-mobile" class="left">
-            <li><a href="">Home</a></li>
+            <li><a href="index.html">Home</a></li>
             <li><a href="recipecatalog.html">Recipes</a></li>
             <li><a href="myprofile.html">My Profile</a></li>
           </ul>
 
           <ul id="nav-mobile" class="right">
-            <!-- <div class="card search-wrap">
-              <input id="search" type="search">
-              <i class="material-icons">search</i>
-            </div> -->
-            <li><a href="signup.html">Sign up</a></li>
+            <li class="search">
+                <div>
+                    <!-- <label for="search">Search Catalog</label> -->
+                    <input id="search" type="search" placeholder="Search Catalog">   
+                </div>
+             
+            </li>
+            <li><a href="myrecipes.html">My Recipes</a></li>
             <li><a href="signin.html">Sign in</a></li>
           </ul>
         </div>
@@ -45,21 +48,6 @@
     <div id="catalog-view">
       <h2>Recipe Listing</h2>
 
-      <div class="row">
-        <div class="col s12">
-          <div class="card horizontal">
-            <div class="card-image col s4">
-              <img src="media/jollofrice.jpg" class="responsive-image resize">
-            </div>
-            <div class="card-stacked col s8">
-              <div class="card-content ">
-                <p><a>Jollof Rice and Chicken</a></p>
-              </div>
-            </div>
-
-          </div>
-        </div>
-      </div>
       <div class="col s12">
         <div class="card horizontal">
           <div class="card-image col s4">
@@ -68,31 +56,107 @@
           <div class="card-stacked col s8">
             <div class="card-content ">
               <p><a>Amala and Ewedu</a></p>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                Maecenas accumsan lacus vel facilisis volutpat.</p>
             </div>
           </div>
         </div>
       </div>
-    </div>
-    <div id="popular-view">
-      <div class="section">
-        <h3>Popular</h3>
-      </div>
-      <div class="divider"></div>
-      <div class="section">
-        <div class="row">
-          <div class="col s12">
-            <div class="card">
-              <div class="card-image">
-                <img src="media/amala.jpg">
-                <span class="card-title">Amala and Ewedu</span>
-              </div>
+
+      <div class="col s12">
+        <div class="card horizontal">
+          <div class="card-image col s4">
+            <img src="media/tofu_200_200.jpg" class="responsive-image resize">
+          </div>
+          <div class="card-stacked col s8">
+            <div class="card-content ">
+              <p><a>Tofu</a></p>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Maecenas accumsan lacus vel facilisis volutpat.</p>
             </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col s12">
+        <div class="card horizontal">
+          <div class="card-image col s4">
+            <img src="media/hamburger_200_200.jpg" class="responsive-image resize">
+          </div>
+          <div class="card-stacked col s8">
+            <div class="card-content ">
+              <p><a>Hamburger</a></p>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Maecenas accumsan lacus vel facilisis volutpat.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col s12">
+        <div class="card horizontal">
+          <div class="card-image col s4">
+            <img src="media/meat_200_200.jpg" class="responsive-image resize">
+          </div>
+          <div class="card-stacked col s8">
+            <div class="card-content ">
+              <p><a>Lamb Chops</a></p>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Maecenas accumsan lacus vel facilisis volutpat.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+    <div class="col s12">
+      <div class="card horizontal">
+        <div class="card-image col s4">
+          <img src="media/vegie_200_200.jpg" class="responsive-image resize">
+        </div>
+        <div class="card-stacked col s8">
+          <div class="card-content ">
+            <p><a>Vegie</a></p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                Maecenas accumsan lacus vel facilisis volutpat.</p>
           </div>
         </div>
       </div>
     </div>
 
   </div>
+
+  <div id="popular-view">
+    <div class="section">
+      <h3>Popular</h3>
+    </div>
+    <div class="divider"></div>
+    <div class="section">
+      <div class="row">
+        <div class="col s12">
+            <img src="media/meatpot_400_200.jpg"  width="250" height="120" class="responsive-image">
+            <a><span class="img-cap">Lamb Chops</span></a>
+        </div>
+
+        <div class="col s12">
+            <img src="media/tofu_400_200.jpg" width="250" height="120" class="responsive-image">
+            <a><span class="img-cap">Tofu</span></a>
+          </div>
+
+          <div class="col s12">
+              <img src="media/vegmix_400_200.jpg" width="250" height="120" class="responsive-image">
+              <a href=""><span class="img-cap">Vegetable Mix</span></a>
+              
+            </div>
+      </div>
+        
+        
+        
+      
+    </div>
+  </div>
+  
+</div>
   <!-- main catalog -->
   <footer>
     <div class="container">
@@ -113,7 +177,6 @@
     //   console.log(e);
     // })
         //cardImage.getElementById('hider').style.display = "inline";
-    
   </script>
 
 </body>

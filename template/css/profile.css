@@ -1,14 +1,15 @@
 .content-wrap {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
+    align-content: center;
 }
 
 .profile {
-    flex: 2 1 55%;
+    flex-basis:60%;
 }
 
 .favorites {
-    flex: 1 1 20%;
+    flex-basis:25%;
 }
 
 img {

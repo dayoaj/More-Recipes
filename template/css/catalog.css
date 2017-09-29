@@ -18,16 +18,11 @@ img.resize {
     margin: 0 4px;
 }
 
-.search {
-    flex: 1;
-    margin-top: 1px;
-    padding: 1.2em 0 .2em 0;
-}
 
 #catalog-view {
     flex-basis: 67%;
     box-sizing: border-box;
-    background-color: rgba(143, 43, 71, 0.3);
+    background-color: rgba(192, 59, 97, 0.3);
     padding: 0.4em 1em;
     border-radius: .4em;
 }
@@ -45,8 +40,19 @@ img.resize {
     font-size: 1.8em;
 }
 
-.wrap-search .input-field {
-    background-color: #fff;
+.img-cap {
+    font-size: 1em;
+    color: white;
+    text-align: center;
+}
+
+#search {
+    border: 2px solid #fff;
+    background-color: #F0B78C;
+    border-radius: 0.2em;
+    line-height: 0.9em;
+    width: 100%;
+    color: black;
 }
 
 

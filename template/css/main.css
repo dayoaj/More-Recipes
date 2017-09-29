@@ -80,6 +80,11 @@ a:hover {
       font-style: italic;
   }
 
+  li.search {
+      position:absolute;
+      right: 200px;
+  }
+
   /*==== main-body ====*/
 
   .outer-wrapper {
