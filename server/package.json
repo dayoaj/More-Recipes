@@ -4,7 +4,7 @@
   "description": "Server for More-Recipes",
   "main": "www.js",
   "scripts": {
-    "start:dev": "nodemon --watch server --exec babel-node  -- ./bin/www",
+    "start:dev": "nodemon --watch server --exec babel-node  -- ./server",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Ifedayo Ajibola",

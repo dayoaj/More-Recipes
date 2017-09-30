@@ -35,7 +35,7 @@ router.post('/recipes', (req, res) => {
 
 router.put('/recipes/:recipeid', (req, res) => {
   global.recipes.forEach((recipe) => {
-    if (recipe.id === parseInt(req.params.recipeId, 10)) {
+    if (recipe.recipeId === parseInt(req.params.recipeid, 10)) {
       recipe.title = req.body.title;
       recipe.upvotes = req.body.upvotes;
       recipe.reviews = req.body.reviews;
@@ -47,6 +47,22 @@ router.put('/recipes/:recipeid', (req, res) => {
   });
   return res.status(404).json({
     message: 'user not found',
+    error: true
+  });
+});
+
+router.get('/recipes/:recipeid', (req, res) => {
+  global.recipes.forEach((recipe) => {
+    if (recipe.recipeId === parseInt(req.params.recipeid, 10)) {
+      return res.json({
+        user: recipe,
+        message: 'Success',
+        error: false
+      });
+    }
+  });
+  return res.status(404).json({
+    message: 'User not found',
     error: true
   });
 });
