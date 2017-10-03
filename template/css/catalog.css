@@ -44,6 +44,7 @@ img.resize {
     font-size: 1em;
     color: white;
     text-align: center;
+    font-family: 'Cabin', sans-serif;
 }
 
 #search {
