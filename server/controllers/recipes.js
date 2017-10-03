@@ -11,6 +11,20 @@ global.recipes = [
     upvotes: 3,
     reviews: ['Very Good', 'I love this recipe'],
 
+  },
+  {
+    id: 2,
+    title: 'Jollof Rice',
+    upvotes: 7,
+    reviews: ['Very Good', 'I love this recipe'],
+
+  },
+  {
+    id: 3,
+    title: 'Jollof Rice',
+    upvotes: 9,
+    reviews: ['Very Good', 'I love this recipe'],
+
   }
 ];
 
@@ -105,6 +119,33 @@ router.post('/recipes/:recipeid/reviews', (req, res) => {
   return res.status(404).json({
     message: 'user not found',
     error: true
+  });
+});
+
+router.get('recipes?sort=upvotes&order=des', (req, res) => {
+  // const sortVariable = req.query.sort;
+  // const orderVariable = req.query.order;
+  const sorted = global.recipes;
+
+  sorted.sort((a, b) => {
+    const varA = a.upvotes;
+    const varB = b.upvotes;
+
+    // if (orderVariable === 'asc') {
+    //   if (varA < varB) { return -1; }
+    //   if (varA > varB) { return 1; }
+    //   return 0;
+    // }
+
+    // if (orderVariable === 'des') {
+    if (varA < varB) { return 1; }
+    if (varA > varB) { return -1; }
+    return 0;
+    // }
+  });
+  res.json({
+    recipes: sorted,
+    error: false
   });
 });
 
