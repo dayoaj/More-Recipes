@@ -1,18 +1,17 @@
-'use strict';
+
 module.exports = {
-  up: (queryInterface, Sequelize) => {
-    return queryInterface.createTable('Upvotes', {
+  up: (queryInterface, Sequelize) =>
+    queryInterface.createTable('Upvotes', {
       id: {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      id: {
-        type: Sequelize.INTEGER
-      },
       flag: {
-        type: Sequelize.BOOLEAN
+        type: Sequelize.BOOLEAN,
+        allowNull: false,
+        defaultValue: false
       },
       createdAt: {
         allowNull: false,
@@ -21,10 +20,26 @@ module.exports = {
       updatedAt: {
         allowNull: false,
         type: Sequelize.DATE
+      },
+      userId: {
+        type: Sequelize.INTEGER,
+        allowNull: false,
+        unique: 'compositeIndex',
+        references: {
+          model: 'Users',
+          key: 'id'
+        }
+      },
+      recipeId: {
+        type: Sequelize.INTEGER,
+        allowNull: false,
+        unique: 'compositeIndex',
+        references: {
+          model: 'Recipes',
+          key: 'id'
+        }
       }
-    });
-  },
-  down: (queryInterface, Sequelize) => {
-    return queryInterface.dropTable('Upvotes');
-  }
+    }),
+  down: (queryInterface /* , Sequelize */) =>
+    queryInterface.dropTable('Upvotes'),
 };

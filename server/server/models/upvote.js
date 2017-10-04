@@ -4,14 +4,38 @@ export default (sequelize, DataTypes) => {
     id: {
       type: DataTypes.INTEGER,
       allowNull: false,
+      primaryKey: true,
+      autoIncrement: true
     },
     flag: {
-      type: DataTypes.BOOLEAN
+      type: DataTypes.BOOLEAN,
+      allowNull: false,
+      defaultValue: false
+    },
+    userId: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      unique: 'compositeIndex',
+      references: {
+        model: 'User',
+        key: 'id'
+      }
+    },
+    recipeId: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      unique: 'compositeIndex',
+      references: {
+        model: 'Recipe',
+        key: 'id'
+      }
     }
   });
 
   Upvote.associate = (models) => {
     // associations can be defined here
+    Upvote.belongsTo(models.Recipe);
+    Upvote.belongsTo(models.User);
   };
 
   return Upvote;
