@@ -22,9 +22,6 @@ app.listen(port, () => {
   console.log(`Server started at port ${port}`);
 });
 
-// Setup a default catch-all route that sends back a welcome message in JSON format.
-// app.get('/', (req, res) => res.status(200).send({
-//   message: 'Welcome to default',
-// }));
+
 
 export default app;

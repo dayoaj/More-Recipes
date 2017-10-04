@@ -2,32 +2,6 @@ import express from 'express';
 
 const router = express.Router();
 
-let recipeIdAllocator = 1;
-
-global.recipes = [
-  {
-    id: 1,
-    title: 'Jollof Rice',
-    upvotes: 3,
-    reviews: ['Very Good', 'I love this recipe'],
-
-  },
-  {
-    id: 2,
-    title: 'Jollof Rice',
-    upvotes: 7,
-    reviews: ['Very Good', 'I love this recipe'],
-
-  },
-  {
-    id: 3,
-    title: 'Jollof Rice',
-    upvotes: 9,
-    reviews: ['Very Good', 'I love this recipe'],
-
-  }
-];
-
 // Handles route to get all recipe
 router.get('/recipes', (req, res) => {
   res.json({
@@ -46,13 +20,11 @@ router.post('/recipes', (req, res) => {
   }
 
   // Adds id to request
-  recipeIdAllocator += 1;
-  req.body.id = (recipeIdAllocator);
 
   // push request to array body
   global.recipes.push(req.body);
   return res.json({
-    message: `Success, Recipe id = ${recipeIdAllocator}`,
+    message: 'Success',
     error: false
   });
 });
