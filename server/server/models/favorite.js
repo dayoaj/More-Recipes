@@ -9,6 +9,8 @@ export default (sequelize, DataTypes) => {
 
   Favorite.associate = (models) => {
     // associations can be defined here
+    Favorite.belongsTo(models.User);
+    Favorite.belongsTo(models.Recipe);
   };
 
   return Favorite;
