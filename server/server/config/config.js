@@ -4,17 +4,17 @@ dotenv.config();
 
 const config = {
   development: {
-    username: process.env.DEV_DB_USER,
-    password: process.env.DEV_DB_PASSWORD,
-    database: process.env.DEV_DB_NAME,
-    host: process.env.DEV_HOST,
+    username: 'postgres',
+    password: process.env.DB_PASS,
+    database: process.env.DB_NAME,
+    host: process.env.DB_HOST,
     dialect: 'postgres'
   },
   test: {
-    username: process.env.DEV_DB_USER,
-    password: process.env.TEST_DB_PASSWORD,
-    database: process.env.TEST_DB_NAME,
-    host: process.env.DEV_HOST,
+    username: 'postgres',
+    password: process.env.DB_PASS,
+    database: process.env.DB_NAME,
+    host: process.env.DB_HOST,
     dialect: 'postgres'
   },
   production: {
@@ -23,4 +23,4 @@ const config = {
     logging: false
   }
 };
-export default config[process.env.NODE_ENV || 'development'];
+module.exports = config[process.env.NODE_ENV || 'development'];
