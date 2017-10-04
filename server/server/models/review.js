@@ -5,6 +5,8 @@ export default (sequelize, DataTypes) => {
     id: {
       type: DataTypes.INTEGER,
       allowNull: false,
+      primaryKey: true,
+      autoIncrement: true
     },
     content: {
       type: DataTypes.STRING
@@ -13,6 +15,8 @@ export default (sequelize, DataTypes) => {
 
   Review.associate = (models) => {
     // associations can be defined here
+    Review.belongsTo(models.User);
+    Review.belongsTo(models.Recipe);
   };
 
   return Review;
