@@ -4,6 +4,26 @@ export default (sequelize, DataTypes) => {
     id: {
       type: DataTypes.INTEGER,
       allowNull: false,
+      primaryKey: true,
+      autoIncrement: true
+    },
+    userId: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      unique: 'composite',
+      references: {
+        model: 'User',
+        key: 'id'
+      }
+    },
+    recipeId: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      unique: 'composite',
+      references: {
+        model: 'Recipe',
+        key: 'id'
+      }
     }
   });
 
