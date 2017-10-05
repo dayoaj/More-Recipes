@@ -1,7 +1,7 @@
 import express from 'express';
 import logger from 'morgan';
 import bodyParser from 'body-parser';
-import recipeController from './controllers';
+import Controller from './controllers';
 
 // Set up the express app
 const app = express();
@@ -16,7 +16,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 const port = parseInt(process.env.PORT, 10) || 8000;
 app.set('port', port);
 
-app.use(recipeController);
+app.use(Controller);
 
 app.listen(port, () => {
   console.log(`Server started at port ${port}`);

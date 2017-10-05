@@ -1,7 +1,7 @@
 import express from 'express';
-import recipes from './recipes';
+import routes from './route';
 
 const router = express.Router();
 
-router.use('/api', recipes);
+router.use('/api', routes);
 export default router;

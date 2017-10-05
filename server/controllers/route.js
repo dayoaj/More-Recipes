@@ -1,14 +1,15 @@
 import express from 'express';
+import recipe from './recipeController';
+import user from './userController';
 
 const router = express.Router();
 
 // Handles route to get all recipe
-router.get('/recipes', (req, res) => {
-  res.json({
-    recipes: global.recipes,
-    error: false
-  });
-});
+router.get('/recipes', recipe.list);
+
+router.post('/users/signup', user.createUser);
+
+router.get('/users/signin', user.getUser);
 
 // Handles route to add a new recipe
 router.post('/recipes', (req, res) => {
@@ -31,25 +32,25 @@ router.post('/recipes', (req, res) => {
 
 //
 router.put('/recipes/:recipeid', (req, res) => {
-  let found = false;
-  found = global.recipes.some((recipe) => {
-    if (recipe.id === parseInt(req.params.recipeid, 10)) {
-      recipe.title = req.body.title;
-      recipe.upvotes = req.body.upvotes;
-      recipe.reviews = req.body.reviews;
-    }
-    return recipe.id === parseInt(req.params.recipeid, 10);
-  });
-  if (found) {
-    return res.json({
-      message: 'Success',
-      error: false
-    });
-  }
-  return res.status(404).json({
-    message: 'user not found',
-    error: true
-  });
+  // let found = false;
+  // found = global.recipes.some((recipe) => {
+  //   if (recipe.id === parseInt(req.params.recipeid, 10)) {
+  //     recipe.title = req.body.title;
+  //     recipe.upvotes = req.body.upvotes;
+  //     recipe.reviews = req.body.reviews;
+  //   }
+  //   return recipe.id === parseInt(req.params.recipeid, 10);
+  // });
+  // if (found) {
+  //   return res.json({
+  //     message: 'Success',
+  //     error: false
+  //   });
+  // }
+  // return res.status(404).json({
+  //   message: 'user not found',
+  //   error: true
+  // });
 });
 
 // Delete particular recipes
