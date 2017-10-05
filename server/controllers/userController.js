@@ -41,7 +41,7 @@ const userController = {
         const token = jwt.sign({ id: user.id }, config.encryptPassword, {
           expiresIn: 86400 // expires in 24 hours
         });
-        res.status(200).send({ auth: true, token });
+        res.status(200).send({ message: 'Sign up successful', token });
       });
     }
     return validator.errors.get('email');
