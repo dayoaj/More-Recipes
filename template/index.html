@@ -23,13 +23,22 @@
       <nav>
         <div class="nav-wrapper nav-prop">
           <a href="#" class="logo">More-Recipes</span></a>
-          <ul id="nav-mobile" class="left">
+          <ul id="slide-out" class="side-nav">
+            <li><a class="waves-effect side-link" href="recipecatalog.html">Third Link With Waves</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="recipecatalog.html">Recipes</a></li>
+            <li><a href="myprofile.html">My Profile</a></li>
+            <li><a href="myrecipes.html">My Recipes</a></li>
+            <li><a href="signin.html">Sign in</a></li>
+          </ul>
+          <a href="#" data-activates="slide-out" class="right button-collapse"><i class="material-icons">menu</i></a>
+          <ul id="nav-mobile" class="left hide-on-med-and-down" >
             <li><a href="index.html">Home</a></li>
             <li><a href="recipecatalog.html">Recipes</a></li>
             <li><a href="myprofile.html">My Profile</a></li>
           </ul>
 
-          <ul id="nav-mobile" class="right">
+          <ul id="nav-mobile" class="right hide-on-med-and-down">
               <li><a href="myrecipes.html">My Recipes</a></li>
             <li><a href="signin.html">Sign in</a></li>
           </ul>
@@ -43,19 +52,22 @@
         <li>
           <img src="media/spaghetti.jpg" alt="">
           <div class="caption left-align">
-            <h1 class="light black-text text-lighten-3">Welcome to the Home of Recipes</h1>
+            <h1 class="light black-text hide-on-small-only">Welcome to the Home of Recipes</h1>
+            <h4 class="light black-text hide-on-med-and-up">Welcome to the Home of Recipes</h4>
           </div>
         </li>
         <li>
           <img src="media/meat.jpg" alt="">
           <div class="caption left-align">
-            <h1 class="light black-text text-lighten-3">More-Recipes - a haven for foodies</h1>
+            <h1 class="left light black-text hide-on-small-only">More-Recipes - a haven for foodies</h1>
+            <h4 class="left light black-text hide-on-med-and-up">More-Recipes - a haven for foodies</h4>
           </div>
         </li>
         <li>
           <img src="media/meatinpot.jpg" alt="Meat in a Dish">
           <div class="caption left-align">
-            <h1 class="light black-text text-lighten-3">Delicacies that lift the Heart</h1>
+            <h1 class="light black-text hide-on-small-only">Delicacies that lift the Heart</h1>
+            <h4 class="light black-text hide-on-med-and-up">Delicacies that lift the Heart</h4>
           </div>
         </li>
       </ul>
@@ -110,7 +122,9 @@
     $(document).ready(function () {
 
       //initialize slider
-      $('.slider').slider();
+      $('.slider').slider({menuWidth: 250});
+
+      $(".button-collapse").sideNav();
 
       //initialize modal
       $('.modal').modal();

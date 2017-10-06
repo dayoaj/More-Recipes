@@ -62,11 +62,18 @@ a:hover {
 }
 
 
+
   /*==== header ====*/
   .nav-prop {
       background-color: #814C5B;
   }
-
+  .nav-prop .side-nav {
+    background-color: #F3832D;
+    color: white;
+  }
+  .nav-prop .side-link {
+    color: white;
+  }
   .nav-prop a {
       text-decoration: none;
   }
