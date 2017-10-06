@@ -9,14 +9,14 @@ const createUserRules = {
   username: 'required|between:2,40',
   email: 'required|email',
   password: 'required|between:4,40',
-  phone: 'integer'
+  phone: 'required|between:3,21'
 };
 
 // Rules for validating user sign in
-// const getUserRules = {
-//   username: 'required|between:2,40',
-//   password: 'required|between:4,40'
-// };
+const signInRules = {
+  username: 'required|between:2,40',
+  password: 'required|between:4,40'
+};
 
 
 const userController = {
@@ -37,35 +37,36 @@ const userController = {
         password: hashedPassword,
         phone: req.body.phone
       }).then((user) => {
-        // jwt token
-        const token = jwt.sign({ id: user.id }, config.encryptPassword, {
-          expiresIn: 86400 // expires in 24 hours
+        const token = jwt.sign({ username: user.username }, config.encryptPassword, {
+          expiresIn: 1440 // expires in 1 hour
         });
-        res.status(200).send({ message: 'Sign up successful', token });
-      });
+        res.send({ message: 'Sign up successful', token });
+      }).catch(err => res.status(500).send(err));
     }
-    return validator.errors.get('email');
+    // return res.status(400).send('Request not properly structured');
   },
 
-  getUser(req, res) {
-    const token = req.headers['x-access-token'];
-    if (!token) return res.status(401).send({ auth: false, message: 'No token provided.' });
+  signIn(req, res) {
+    const reqParam = req.body;
 
-    jwt.verify(token, config.encryptPassword, (err, decoded) => {
-      if (err) {
-        return res.status(500)
-          .send({ auth: false, message: 'Failed to authenticate token.' });
-      }
-      res.status(200).send(decoded);
-      // const reqParam = req.body;
-      // const validator = new Validator(reqParam, getUserRules);
-      // if (validator.passes()) {
-      // User.findById(decoded.id)
-      //   .then(user => res.status(200).send(user))
-      //   .catch(err => res.status(500).send(`There was a problem finding the user. Error${err}`));
-      // }
-      // return validator.errors.get();
-    });
+    // Initialize Validator
+    const validator = new Validator(reqParam, signInRules);
+
+    // Checks if Validation passes and then execute
+    if (validator.passes()) {
+      User.findOne({ where: { username: req.body.username } })
+        .then((user) => {
+          const passwordIsValid = bcrypt.compareSync(req.body.password, user.password);
+          if (!passwordIsValid) return res.status(401).send({ message: 'Password invalid', token: null });
+          const token = jwt.sign({ username: user.username }, config.encryptPassword, {
+            expiresIn: 1440 // expires in 1 hour
+          });
+          return res.status(200)
+            .send({ message: 'Log in Successful', token });
+        })
+        .catch(err => res.status(500).send(`There was a problem finding the user. ${err}`));
+    }
+    return validator.errors.get();
   }
 
 };

@@ -1,34 +1,24 @@
 import express from 'express';
 import recipe from './recipeController';
 import user from './userController';
+import VerifyToken from '../Middleware/verifyToken';
+
 
 const router = express.Router();
+
 
 // Handles route to get all recipe
 router.get('/recipes', recipe.list);
 
+// Handles route to sign up
 router.post('/users/signup', user.createUser);
 
-router.get('/users/signin', user.getUser);
+// Handles route to sign in
+router.post('/users/signin', user.signIn);
+
 
 // Handles route to add a new recipe
-router.post('/recipes', (req, res) => {
-  if (!req.body.title) {
-    return res.json({
-      message: 'Recipe title missing',
-      error: true
-    });
-  }
-
-  // Adds id to request
-
-  // push request to array body
-  global.recipes.push(req.body);
-  return res.json({
-    message: 'Success',
-    error: false
-  });
-});
+router.post('/recipes', VerifyToken, recipe.addNew);
 
 //
 router.put('/recipes/:recipeid', (req, res) => {
