@@ -8,6 +8,11 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER
       },
+      title: {
+        type: Sequelize.STRING,
+        unique: true,
+        allowNull: false
+      },
       ingredient: {
         type: Sequelize.STRING,
         allowNull: false
@@ -23,6 +28,16 @@ module.exports = {
       updatedAt: {
         allowNull: false,
         type: Sequelize.DATE
+      },
+      userId: {
+        type: Sequelize.INTEGER,
+        onDelete: 'CASCADE',
+        allowNull: false,
+        unique: 'compositeIndex',
+        references: {
+          model: 'Users',
+          key: 'id'
+        }
       }
     }),
 

@@ -10,11 +10,13 @@ module.exports = {
       },
       username: {
         type: Sequelize.STRING,
+        unique: true,
         allowNull: false
       },
       email: {
         type: Sequelize.STRING,
         allowNull: false,
+        unique: true,
         validate: {
           isEmail: true
         }
@@ -24,7 +26,7 @@ module.exports = {
         allowNull: false
       },
       phone: {
-        type: Sequelize.INTEGER
+        type: Sequelize.STRING
       },
       createdAt: {
         allowNull: false,

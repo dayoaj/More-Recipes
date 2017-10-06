@@ -19,6 +19,7 @@ module.exports = {
       userId: {
         type: Sequelize.INTEGER,
         allowNull: false,
+        onDelete: 'CASCADE',
         unique: 'composite',
         references: {
           model: 'Users',
@@ -28,6 +29,7 @@ module.exports = {
       recipeId: {
         type: Sequelize.INTEGER,
         allowNull: false,
+        onDelete: 'CASCADE',
         unique: 'composite',
         references: {
           model: 'Recipes',

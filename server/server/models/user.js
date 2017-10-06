@@ -9,11 +9,13 @@ export default (sequelize, DataTypes) => {
     },
     username: {
       type: DataTypes.STRING,
+      unique: true,
       allowNull: false
     },
     email: {
       type: DataTypes.STRING,
       allowNull: false,
+      unique: true,
       validate: {
         isEmail: true
       }
@@ -23,16 +25,16 @@ export default (sequelize, DataTypes) => {
       allowNull: false
     },
     phone: {
-      type: DataTypes.INTEGER
+      type: DataTypes.STRING
     }
   });
 
   User.associate = (models) => {
     // associations can be defined here
-    User.hasMany(models.Review);
-    User.hasMany(models.Upvote, { foreignKey: 'userId' });
+    User.hasMany(models.Review, { foreignKey: 'userId' });
+    User.hasOne(models.Upvote, { foreignKey: 'userId' });
     User.hasMany(models.Favorite, { foreignKey: 'userId' });
-    User.hasMany(models.Recipe);
+    User.hasMany(models.Recipe, { foreignKey: 'userId' });
   };
   return User;
 };

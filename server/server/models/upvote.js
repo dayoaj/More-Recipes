@@ -34,8 +34,14 @@ export default (sequelize, DataTypes) => {
 
   Upvote.associate = (models) => {
     // associations can be defined here
-    Upvote.belongsTo(models.Recipe);
-    Upvote.belongsTo(models.User);
+    Upvote.belongsTo(models.Recipe, {
+      foreignKey: 'recipeId',
+      onDelete: 'CASCADE',
+    });
+    Upvote.belongsTo(models.User, {
+      foreignKey: 'userId',
+      onDelete: 'CASCADE',
+    });
   };
 
   return Upvote;
