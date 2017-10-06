@@ -1,28 +1,56 @@
 # More-Recipes
-******** More-Recipes ********
 
-==============================
-           WHAT?
-==============================
-More-Recipe is an online forum for food lovers. It gives various individuals opportunity to learn and share 
-new and exciting ways of making delightful delicacies
+## Table of Contents
+- [More-Recipes](#more-recipes)
+  - [Table of Contents](#table-of-contents)
+  - [Synopsis](#synopsis)
+- [Features](#features)
+  - [Users](#users)
+  - [Authenticated User](#authenticated-user)
+  - [Sign up](#sign-up)
+  - [Sign in](#sign-in)
 
-==============================
-           WHY?
-==============================
-Two good heads are always better than one. Seeing the world from the eyes of others helps make one well 
-rounded and versatile. Sharing recipes helps you grow by knowing more.
+## Synopsis 
+More Recipes is a web app for sharing recipes. Some of its features include:
 
-==============================
-           HOW?
-==============================
-Recipe Catalog
-The web app allows for users to browse through an indepth catalog of meals that come from around the world
+  - Viewing recipes in the online catalog
+  - Adding new recipes to the forum
+  - Read reviews on recipes
+  - Make your list of favorite recipes
 
-My Recipes!
-You can create an account, share your recipes and wait for reviews from our numerous users.
-You can also keep a list of your favorite recipes.
+# Features
+## Users
+A user is not necessarily authenticated. This term may describe a casual visitor or a registered and authenticated user.
 
-So, Give it a try.
-Feedbacks are always welcome.
+A user may
+- View Recipe Catalog
+- View most popular recipes
+- Search for specific recipes
+- View Recipe details and procedures. He/She can also view the reviews
 
+## Authenticated User
+An authenticated user may visit any of this pages:
+- My Recipes
+  - Contains the list of recipes added by the user.
+  
+- My Profile
+  - This page displays profile details of the user
+  - It also shows list of favorited recipes.
+- Review
+  - Authenticated User may add reviews for specific recipes
+- Upvote
+  - May upvote or downvote a recipe.
+- Favorite
+  - He/She can add specific recipes as favorites
+
+> Take Note:
+
+> Authorization for any particular session ends after an hour
+
+> The search box is on the top right corner of the web page.(Always on the sticky header);
+
+## Sign up
+Users must supply a unique username and email address when signing up.
+
+## Sign in
+User signs in with username and password
