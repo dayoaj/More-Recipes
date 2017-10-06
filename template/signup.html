@@ -21,30 +21,30 @@
     <header>
         <div class="navbar-fixed">
             <nav>
-              <div class="nav-wrapper nav-prop">
-                <a href="#" class="logo">More-Recipes</span></a>
-                <ul id="slide-out" class="side-nav">
-                  <li><a class="waves-effect side-link" href="recipecatalog.html">Third Link With Waves</a></li>
-                  <li><a href="index.html">Home</a></li>
-                  <li><a href="recipecatalog.html">Recipes</a></li>
-                  <li><a href="myprofile.html">My Profile</a></li>
-                  <li><a href="myrecipes.html">My Recipes</a></li>
-                  <li><a href="signin.html">Sign in</a></li>
-                </ul>
-                <a href="#" data-activates="slide-out" class="right button-collapse"><i class="material-icons">menu</i></a>
-                <ul id="nav-mobile" class="left hide-on-med-and-down" >
-                  <li><a href="index.html">Home</a></li>
-                  <li><a href="recipecatalog.html">Recipes</a></li>
-                  <li><a href="myprofile.html">My Profile</a></li>
-                </ul>
-      
-                <ul id="nav-mobile" class="right hide-on-med-and-down">
-                    <li><a href="myrecipes.html">My Recipes</a></li>
-                  <li><a href="signin.html">Sign in</a></li>
-                </ul>
-              </div>
+                <div class="nav-wrapper nav-prop">
+                    <a href="#" class="logo">More-Recipes</span></a>
+                    <ul id="slide-out" class="side-nav">
+                        <li><a class="waves-effect side-link" href="recipecatalog.html">Third Link With Waves</a></li>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="recipecatalog.html">Recipes</a></li>
+                        <li><a href="myprofile.html">My Profile</a></li>
+                        <li><a href="myrecipes.html">My Recipes</a></li>
+                        <li><a href="signin.html">Sign in</a></li>
+                    </ul>
+                    <a href="#" data-activates="slide-out" class="right button-collapse"><i class="material-icons">menu</i></a>
+                    <ul id="nav-mobile" class="left hide-on-med-and-down">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="recipecatalog.html">Recipes</a></li>
+                        <li><a href="myprofile.html">My Profile</a></li>
+                    </ul>
+
+                    <ul id="nav-mobile" class="right hide-on-med-and-down">
+                        <li><a href="myrecipes.html">My Recipes</a></li>
+                        <li><a href="signin.html">Sign in</a></li>
+                    </ul>
+                </div>
             </nav>
-          </div>
+        </div>
     </header>
     <div class="outer-wrapper">
         <div class="container">
@@ -53,39 +53,39 @@
                     <div class="row">
                         <div class="col s8 offset-s2">
                             <div class="card-panel #000">
-                                    <h3>Sign up</h3>
-                                        <div class="container">
-                                            <form action="">
-                                                <div class="row">
-                                                    <div class="input-field col s8 offset-s2">
-                                                        <input id="first_name" type="text" class="validate">
-                                                        <label for="first_name">First Name</label>
-                                                    </div>
-                                                    <div class="input-field col s8 offset-s2">
-                                                        <input id="last_name" type="text" class="validate">
-                                                        <label for="last_name">Last Name</label>
-                                                    </div>
-                                                    <div class="input-field col s8 offset-s2">
-                                                        <input id="email" type="email" class="validate">
-                                                        <label for="email">Email</label>
-                                                    </div>
-                                                    <div class="input-field col s8 offset-s2">
-                                                        <input id="password" type="password" class="validate">
-                                                        <label for="password">Password</label>
-                                                    </div>
-                                                </div>
-                                                <a href="" class="btn button-format col s5 offset-s4">Register</a>
-                                            </form>
+                                <h3>Sign up</h3>
+                                <div class="container">
+                                    <form action="">
+                                        <div class="row">
+                                            <div class="input-field col s8 offset-s2">
+                                                <input id="first_name" type="text" class="validate">
+                                                <label for="first_name">First Name</label>
+                                            </div>
+                                            <div class="input-field col s8 offset-s2">
+                                                <input id="last_name" type="text" class="validate">
+                                                <label for="last_name">Last Name</label>
+                                            </div>
+                                            <div class="input-field col s8 offset-s2">
+                                                <input id="email" type="email" class="validate">
+                                                <label for="email">Email</label>
+                                            </div>
+                                            <div class="input-field col s8 offset-s2">
+                                                <input id="password" type="password" class="validate">
+                                                <label for="password">Password</label>
+                                            </div>
                                         </div>
+                                        <a href="" class="btn button-format col s5 offset-s4">Register</a>
+                                    </form>
                                 </div>
-
                             </div>
+
                         </div>
                     </div>
-
                 </div>
+
             </div>
         </div>
+    </div>
     </div>
     <footer>
         <div class="container">
@@ -99,6 +99,12 @@
     <!--Import jQuery before materialize.js-->
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script type="text/javascript" src="js/materialize.min.js"></script>
+    <script>
+        $(document).ready(function () {
+
+            $(".button-collapse").sideNav();
+        });
+    </script>
 </body>
 
 </html>

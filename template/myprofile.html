@@ -89,7 +89,8 @@
 
       </div>
       <div class="favorites">
-        <h3>My Favorites</h3>
+        <h3 class="hide-on-med-and-down">My Favorites</h3>
+        <h4 class="hide-on-large-only">My Favorites</h4>
         <div class="collection">
           <a href="#!" class="collection-item">Banga and Starch</a>
           <a href="#!" class="collection-item">Ewedu and Amala</a>
@@ -111,6 +112,12 @@
   <!--Import jQuery before materialize.js-->
   <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
   <script type="text/javascript" src="js/materialize.min.js"></script>
+  <script>
+    $(document).ready(function () {
+
+      $(".button-collapse").sideNav();
+    });
+  </script>
 </body>
 
 </html>
