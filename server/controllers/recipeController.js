@@ -1,6 +1,5 @@
 import Validator from 'validatorjs';
 import { Recipe, Upvote, User } from '../server/models';
-
 // Rus to vaildate new recipes
 const addNewRecipeRules = {
   title: 'required|between:2,40',
@@ -46,8 +45,6 @@ const recipeController = {
       }]
     }).then(recipe => res.status(200).send(recipe));
   }
-
-
 };
 
 export default recipeController;
