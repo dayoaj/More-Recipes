@@ -1,0 +1,27 @@
+{
+  "name": "More Recipes",
+  "description": "API Endpoint for More Recipes.", 
+  "env": {
+    "SECRET_TOKEN": {
+      "description": "A secret key for verifying for tokens.",
+      "generator": "secret"
+    },
+    "WEB_CONCURRENCY": {
+      "description": "The number of processes to run.",
+      "value": "5"
+    },
+    "DB_HOST": {
+      "value":"localhost"
+    },
+    "DB_USER": {
+      "value":"postgres"
+    },
+    "DB_PASS": {
+      "value":"root"
+    },
+    "DB_NAME": {
+      "value":"MoreRecipes"
+    }
+  }
+
+}
